@@ -18,21 +18,21 @@ df_pergunta3 = df_pergunta2\
 df_pergunta4 = df_pergunta3.withColumn('Data_de_alteracao', current_timestamp())
 
 l_columns_p5 = [col('Title').alias('Titulo'),
-				col('Genre').alias('Genero'),
-				col('GenreLabels').alias('Genero_marcacao'),
-				col('Premiere').alias('Estreia'),
-				col('Seasons').alias('Temporadas'),
-				col('SeasonsParsed').alias('Temporadas_numero'),
-				col('EpisodesParsed').alias('Episodios_numero'),
-				col('Length').alias('Duracao'),
-				col('MinLength').alias('Duracao_minima'),
-				col('MaxLength').alias('Duracao_maxima'),
-				col('Status').alias('Status'),
-				col('Active').alias('Ativo_marcacao'),
-				col('Table').alias('Categoria'),
-				col('Language').alias('Lingua'),
-				col('dt_inclusao').alias('Dt_inclusao'),
-				col('Data_de_alteracao').alias('Data_de_alteracao')]
+		col('Genre').alias('Genero'),
+		col('GenreLabels').alias('Genero_marcacao'),
+		col('Premiere').alias('Estreia'),
+		col('Seasons').alias('Temporadas'),
+		col('SeasonsParsed').alias('Temporadas_numero'),
+		col('EpisodesParsed').alias('Episodios_numero'),
+		col('Length').alias('Duracao'),
+		col('MinLength').alias('Duracao_minima'),
+		col('MaxLength').alias('Duracao_maxima'),
+		col('Status').alias('Status'),
+		col('Active').alias('Ativo_marcacao'),
+		col('Table').alias('Categoria'),
+		col('Language').alias('Lingua'),
+		col('dt_inclusao').alias('Dt_inclusao'),
+		col('Data_de_alteracao').alias('Data_de_alteracao')]
 
 df_pergunta5 = df_pergunta4.select(l_columns_p5)
 
@@ -46,14 +46,14 @@ except:
 #Pergunta 7
 
 l_columns_p7 = [col('Titulo'),
-				col('Genero'),
-				col('Temporadas'),
-				col('Estreia'),
-				col('Lingua'),
-				col('Ativo_marcacao'),
-				col('Status'),
-				col('Dt_inclusao'),
-				col('Data_de_alteracao')]
+		col('Genero'),
+		col('Temporadas'),
+		col('Estreia'),
+		col('Lingua'),
+		col('Ativo_marcacao'),
+		col('Status'),
+		col('Dt_inclusao'),
+		col('Data_de_alteracao')]
 
 df_pergunta7 = df_pergunta5.select(l_columns_p7)
 
@@ -115,9 +115,6 @@ for rr in mA:
 print(chr(10)+'Matriz B:')
 for rr in mB:
     print(rr)
-
-
-
 
 m_Produdo = []
 l_total   = []
